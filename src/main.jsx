@@ -6,21 +6,34 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './Home/Home/Home';
-import Banner from './Home/Banner/Banner';
-import Gallery from './Home/Gallery/Gallery';
+import Main from './Main/Main';
+import SportDetails from './Components/Details/SportDetails';
+import TruckDetails from './Components/Details/TruckDetails';
+import RegularDetails from './Components/Details/RegularDetails';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home></Home>,
+    element: <Main></Main>,
     children: [
       {
         path:'/',
-        element:<Banner></Banner>
+        element:<Home></Home>
       },
       {
-        path:'/',
-        element:<Gallery></Gallery>
+        path:'sports-car-details/:id',
+        element:<SportDetails></SportDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/sport-car/${params.id}`)
+      },
+      {
+        path:'truck-details/:id',
+        element:<TruckDetails></TruckDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/trucks/${params.id}`)
+      },
+      {
+        path:'reg-car-details/:id',
+        element: <RegularDetails></RegularDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/regular-car/${params.id}`)
       }
     ]
   },

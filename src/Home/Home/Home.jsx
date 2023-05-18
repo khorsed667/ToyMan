@@ -1,17 +1,14 @@
-import Nav from '../../Shared/Nav';
-import { Outlet } from 'react-router-dom';
-import Footer from '../../Shared/Footer';
+
 import Gallery from '../Gallery/Gallery';
+import Banner from '../Banner/Banner';
+import Tab from '../Tab/Tab';
 
 const Home = () => {
     return (
         <div>
-            <div className='md:mx-24'>
-                <Nav></Nav>
-                <Outlet></Outlet>
-                <Gallery></Gallery>
-                <Footer></Footer>
-            </div>
+            <Banner></Banner>
+            <Gallery></Gallery>
+            <Tab></Tab>
         </div>
     );
 };

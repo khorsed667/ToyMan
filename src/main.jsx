@@ -10,6 +10,8 @@ import Main from './Main/Main';
 import SportDetails from './Components/Details/SportDetails';
 import TruckDetails from './Components/Details/TruckDetails';
 import RegularDetails from './Components/Details/RegularDetails';
+import Login from './Components/Login/Login';
+import Registration from './Components/Registration/Registration';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
         path:'reg-car-details/:id',
         element: <RegularDetails></RegularDetails>,
         loader: ({params}) => fetch(`http://localhost:5000/regular-car/${params.id}`)
+      },
+      {
+        path:'login',
+        element:<Login></Login>
+      },
+      {
+        path:'registration',
+        element:<Registration></Registration>
       }
     ]
   },

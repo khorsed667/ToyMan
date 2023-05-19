@@ -32,6 +32,7 @@ const Tab = () => {
 
     return (
         <div className="container mx-auto p-4">
+            <p className="text-2xl text-center font-semibold mb-8">Whether your child is a fan of racing cars, off-road adventures, or classic vintage models, our diverse tab system allows you to easily navigate and find the perfect car toy to fuel their imagination.</p>
             <div className="mx-auto">
                 <div className="border-b border-gray-200">
                     <ul className="flex">

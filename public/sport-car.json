@@ -5,6 +5,8 @@
       "price": 19.99,
       "rating": 4.5,
       "id":"s1",
+      "category": "sports-car",
+      "email": "ahmedarian751@gamil.com",
       "details": "The Super Racer toy car is built for speed and excitement. With its sleek design and high-performance features, it's sure to provide hours of fun for any racing enthusiast."
     },
     {
@@ -13,6 +15,8 @@
       "price": 24.99,
       "rating": 4.2,
       "id":"s2",
+      "category": "sports-car",
+      "email": "ahmedarian751@gamil.com",
       "details": "The Turbo Boost toy car is all about power and acceleration. It comes with a turbocharged engine and advanced aerodynamics to give you the ultimate racing experience."
     },
     {
@@ -21,6 +25,8 @@
       "price": 29.99,
       "rating": 4.7,
       "id":"s3",
+      "category": "sports-car",
+      "email": "ahmedarian751@gamil.com",
       "details": "The Nitro Speedster toy car is designed for adrenaline junkies. It features a nitro-fueled engine that delivers lightning-fast speeds and jaw-dropping performance on the racetrack."
     }
   ]

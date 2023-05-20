@@ -5,6 +5,8 @@
       "price": 14.99,
       "rating": 4.0,
       "id":"r1",
+      "category": "regular-car",
+      "email": "ahmedarian751@gamil.com",
       "details": "The City Cruiser toy car is perfect for everyday play. It's designed to resemble a real-life city car and provides hours of imaginative fun for kids."
     },
     {
@@ -13,6 +15,8 @@
       "price": 16.99,
       "rating": 4.3,
       "id":"r2",
+      "category": "regular-car",
+      "email": "ahmedarian751@gamil.com",
       "details": "The Family Sedan toy car is great for pretend family adventures. It features a spacious interior and realistic design, making it a favorite among young car enthusiasts."
     },
     {
@@ -21,6 +25,8 @@
       "price": 19.99,
       "rating": 4.6,
       "id":"r3",
+      "category": "regular-car",
+      "email": "ahmedarian751@gamil.com",
       "details": "The Off-Road Explorer toy car is built to conquer any terrain. With its rugged design and durable construction, it's the perfect choice for outdoor play and exploration."
     }
   ]

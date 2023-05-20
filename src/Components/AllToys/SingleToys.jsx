@@ -1,8 +1,8 @@
-import React from 'react';
+
 
 const SingleToys = ({ toy }) => {
 
-    const { picture, name, price, rating, id, details } = toy
+    const { picture, name, price, rating, category, sellerEmail, } = toy
 
     return (
         <tr>
@@ -14,13 +14,15 @@ const SingleToys = ({ toy }) => {
                         </div>
                     </div>
                     <div>
-                        <div className="font-bold"></div>
                         <div className="text-sm opacity-50">{name}</div>
                     </div>
                 </div>
             </td>
             <td>
-                {id}
+                {sellerEmail}
+            </td>
+            <td>
+                {category}
             </td>
             <td>
                 <p>$ {price}</p>

@@ -5,6 +5,8 @@
       "price": 29.99,
       "rating": 4.8,
       "id":"t1",
+      "category": "trucks",
+      "email": "ahmedarian751@gamil.com",
       "details": "The Monster Truck toy is a powerful and rugged off-road vehicle. It features oversized tires, suspension system, and a fearless design, making it perfect for performing daring stunts and conquering obstacles."
     },
     {
@@ -13,6 +15,8 @@
       "price": 24.99,
       "rating": 4.4,
       "id":"t2",
+      "category": "trucks",
+      "email": "ahmedarian751@gamil.com",
       "details": "The Tow Truck toy is ready to save the day! It comes with a functional tow hook and realistic details. It's ideal for imaginative play scenarios and teaching kids about vehicles and helping others."
     },
     {
@@ -21,6 +25,8 @@
       "price": 19.99,
       "rating": 4.6,
       "id":"t3",
+      "category": "trucks",
+      "email": "ahmedarian751@gamil.com",
       "details": "The Dump Truck toy is perfect for construction-themed play. It features a working dump bed, sturdy construction, and realistic design. Kids can load, transport, and unload materials just like a real dump truck."
     }
   ]

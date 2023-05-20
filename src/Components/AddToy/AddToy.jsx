@@ -11,7 +11,7 @@ const AddToy = () => {
     const [pictureUrl, setPictureUrl] = useState('');
     const [sellerEmail, setSellerEmail] = useState('');
     const [name, setName] = useState('');
-    const [subCategory, setSubCategory] = useState('');
+    const [category, setCategory] = useState('');
     const [price, setPrice] = useState('');
     const [rating, setRating] = useState('');
     const [quantity, setQuantity] = useState('');
@@ -24,7 +24,7 @@ const AddToy = () => {
             pictureUrl,
             sellerEmail,
             name,
-            subCategory,
+            category,
             price,
             rating,
             quantity,
@@ -84,19 +84,19 @@ const AddToy = () => {
                     />
 
 
-                    <label htmlFor="subCategory" className="block mb-2">
+                    <label htmlFor="category" className="block mb-2">
                         Sub-category:
                     </label>
                     <select
-                        id="subCategory"
-                        value={subCategory}
-                        onChange={(event) => setSubCategory(event.target.value)}
+                        id="category"
+                        value={category}
+                        onChange={(event) => setCategory(event.target.value)}
                         className="border rounded px-2 py-1 mb-2 w-full"
                     >
                         <option value="">Select sub-category</option>
-                        <option value="Math Toys">Regular car</option>
-                        <option value="Language Toys">Sports Car</option>
-                        <option value="Science Toys">Trucks</option>
+                        <option value="Regular car">Regular car</option>
+                        <option value="Sports Car">Sports Car</option>
+                        <option value="Trucks">Trucks</option>
                     </select>
 
                     <label htmlFor="price" className="block mb-2">

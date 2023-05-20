@@ -1,11 +1,14 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
+
+    const {singIn} = useContext(AuthContext)
 
     const handelLogin = event => {
         event.preventDefault()
@@ -14,6 +17,13 @@ const Login = () => {
         const password = form.password.value;
         const loginInfo = {email, password}
         console.log(loginInfo);
+
+        singIn(email, password)
+        .then(result => {
+            const user = result.user
+            console.log(user);
+        })
+        .catch(error => console.log(error))
     }
 
     return (

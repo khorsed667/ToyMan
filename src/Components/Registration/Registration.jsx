@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Registration = () => {
 
@@ -7,6 +8,9 @@ const Registration = () => {
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
+
+
+    const {creatUser} = useContext(AuthContext)
 
     const handelLogin = event => {
         event.preventDefault()
@@ -17,6 +21,14 @@ const Registration = () => {
         const photo = form.photo.value;
         const loginInfo = {name, email, password, photo };
         console.log(loginInfo);
+
+
+        creatUser(email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+        })
+        .catch(error => console.log(error))
     }
 
     return (

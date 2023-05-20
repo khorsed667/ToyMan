@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import logo from './../../public/nav-img/toyman.jpg'
 import author from './../../public/nav-img/author.png'
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 
 
 const Nav = () => {
+
+  const user = useContext(AuthContext)
+
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -14,9 +19,9 @@ const Nav = () => {
             </label>
             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
               <li><Link to="/">Home</Link></li>
-              <li><a>All Toys</a></li>
-              <li><a>My Toys</a></li>
-              <li><a>Add a Toys</a></li>
+              <li><Link to="/alltoys">All Toys</Link></li>
+              <li><Link to='/mytoys'>My Toys</Link></li>
+              <li><Link to='/addtoys'>Add a Toys</Link></li>
               <li><a>Blogs</a></li>
             </ul>
           </div>
@@ -26,13 +31,16 @@ const Nav = () => {
           <ul className="menu menu-horizontal px-1">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/alltoys">All Toys</Link></li>
-            <li><a>My Toys</a></li>
+            <li><Link to='/mytoys'>My Toys</Link></li>
             <li><Link to='/addtoys'>Add a Toys</Link></li>
             <li><a>Blogs</a></li>
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to='/login' className="btn md:w-50 m-2">Login</Link>
+          {
+            user ? <Link to='' className="btn md:w-50 m-2">LogOut</Link>
+            : <Link to='/login' className="btn md:w-50 m-2">Login</Link>
+          }
           <img className="w-10" src={author} alt="" />
         </div>
       </div>

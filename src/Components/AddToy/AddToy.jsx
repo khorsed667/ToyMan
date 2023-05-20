@@ -4,9 +4,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 const AddToy = () => {
 
-    const { user } = useContext(AuthContext)
-
-    console.log(user.email);
+    const { user } = useContext(AuthContext);
 
     const [pictureUrl, setPictureUrl] = useState('');
     const [sellerEmail, setSellerEmail] = useState('');
@@ -77,6 +75,7 @@ const AddToy = () => {
                     </label>
                     <input
                         type="text"
+                        autoComplete="off"
                         id="name"
                         value={name}
                         onChange={(event) => setName(event.target.value)}

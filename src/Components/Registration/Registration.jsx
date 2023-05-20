@@ -44,7 +44,7 @@ const Registration = () => {
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="name" name='name' placeholder="Name" className="input input-bordered" />
+                            <input type="name" name='name' autoComplete='off' placeholder="Name" className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">

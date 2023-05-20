@@ -7,8 +7,6 @@ const AllToys = () => {
 
     const [toys, setToys] = useState([])
 
-    const { picture, name, price, rating, id, details } = toys
-
     useEffect(() => {
         fetch('http://localhost:5000/cars')
             .then(res => res.json())

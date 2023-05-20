@@ -22,7 +22,7 @@ const Nav = () => {
               <li><Link to="/alltoys">All Toys</Link></li>
               <li><Link to='/mytoys'>My Toys</Link></li>
               <li><Link to='/addtoys'>Add a Toys</Link></li>
-              <li><a>Blogs</a></li>
+              <li><Link to='/blogs'>Blogs</Link></li>
             </ul>
           </div>
           <img src={logo} alt="" />
@@ -33,7 +33,7 @@ const Nav = () => {
             <li><Link to="/alltoys">All Toys</Link></li>
             <li><Link to='/mytoys'>My Toys</Link></li>
             <li><Link to='/addtoys'>Add a Toys</Link></li>
-            <li><a>Blogs</a></li>
+            <li><Link to='/blogs'>Blogs</Link></li>
           </ul>
         </div>
         <div className="navbar-end">

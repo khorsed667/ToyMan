@@ -27,6 +27,7 @@ const Registration = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
+            form.reset();
         })
         .catch(error => console.log(error))
     }
@@ -68,7 +69,7 @@ const Registration = () => {
                             <button className="btn bg-orange-500">Login</button>
                         </div>
                         <div>
-                            <p>Already have an account? <Link className='text-orange-500' to='/login'>Login Now</Link></p>
+                            <p>Already have an account? <Link className='text-orange-500' to='/login'>SignUp Now</Link></p>
                         </div>
                     </form>
                 </div>

@@ -2,6 +2,7 @@
 import Gallery from '../Gallery/Gallery';
 import Banner from '../Banner/Banner';
 import Tab from '../Tab/Tab';
+import AgeShop from '../AgeShop/AgeShop';
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
             <Banner></Banner>
             <Gallery></Gallery>
             <Tab></Tab>
+            <AgeShop></AgeShop>
         </div>
     );
 };

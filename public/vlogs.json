@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "title": "Top 10 Car Toys for Kids",
+      "date": "May 1, 2023",
+      "author": "John Doe",
+      "img": "https://example.com/image1.jpg",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec scelerisque lectus. Nullam congue, velit et consectetur feugiat, ipsum ipsum luctus urna, id lobortis orci risus vel lacus."
+    },
+    {
+      "id": 2,
+      "title": "The Benefits of Educational Car Toys",
+      "date": "April 15, 2023",
+      "author": "Jane Smith",
+      "img": "https://example.com/image2.jpg",
+      "content": "Praesent gravida, felis vitae consequat fringilla, eros metus faucibus mi, vitae ultrices dui neque in lectus. Etiam euismod sapien eget eros feugiat faucibus."
+    },
+    {
+      "id": 3,
+      "title": "How Car Toys Enhance Child Development",
+      "date": "March 28, 2023",
+      "author": "David Johnson",
+      "img": "https://example.com/image3.jpg",
+      "content": "Aenean sagittis tortor at orci facilisis, eu consectetur purus tempus. Phasellus ullamcorper lacus ut velit scelerisque, et bibendum ex finibus. Curabitur auctor tellus ac ex varius gravida."
+    },
+    {
+      "id": 4,
+      "title": "The Evolution of Remote Control Cars",
+      "date": "February 10, 2023",
+      "author": "Sarah Davis",
+      "img": "https://example.com/image4.jpg",
+      "content": "Quisque vestibulum scelerisque sagittis. Sed sed arcu fringilla, posuere ipsum vitae, tristique nisl. Mauris pellentesque pharetra lectus in bibendum."
+    },
+    {
+      "id": 5,
+      "title": "Tips for Choosing the Right Car Toys for Toddlers",
+      "date": "January 23, 2023",
+      "author": "Michael Wilson",
+      "img": "https://example.com/image5.jpg",
+      "content": "Nulla facilisi. Sed feugiat bibendum eleifend. Suspendisse vel enim at nisi lacinia tristique vel et tortor. Curabitur pharetra odio ac metus vulputate consectetur."
+    },
+    {
+      "id": 6,
+      "title": "The Joy of Collecting Vintage Toy Cars",
+      "date": "December 5, 2022",
+      "author": "Emily Thompson",
+      "img": "https://example.com/image6.jpg",
+      "content": "Fusce sollicitudin ante nec ex consectetur, vitae gravida ex eleifend. Ut vel erat ac ante interdum viverra sed eu nunc. In hendrerit magna at tortor feugiat, ac cursus justo molestie."
+    }
+  ]
+  

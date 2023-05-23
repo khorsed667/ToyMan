@@ -26,13 +26,15 @@ const Login = () => {
             })
             .catch(error => console.log(error))
 
-        singWithGoogle()
-        .then(result=> {
-            const user = result.user
-            console.log(user);
-        })
     }
 
+    const singInWithGoogle = () => {
+        singWithGoogle()
+            .then(result => {
+                const user = result.user
+                console.log(user);
+            })
+    }
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse">
@@ -57,13 +59,14 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <button className="btn bg-orange-500">Login</button>
                         </div>
-                        <div className="form-control mt-6">
-                            <button className="btn bg-orange-500">SignUp with Google</button>
-                        </div>
+
                         <div>
                             <p>New to CarMan? Please <Link className='text-orange-500' to='/registration'>SignUp</Link></p>
                         </div>
                     </form>
+                    <div className="form-control mt-6">
+                        <button onClick={singInWithGoogle} className="btn bg-orange-500">SignUp with Google</button>
+                    </div>
 
                 </div>
             </div>

@@ -7,7 +7,17 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 const Nav = () => {
 
-  const user = useContext(AuthContext)
+  const {user, logOut} = useContext(AuthContext);
+
+  const handelLogOut = () =>{
+    logOut()
+    .then()
+    .catch(error =>{
+      console.log(error);
+    })
+  }
+
+
 
   return (
     <div>
@@ -20,8 +30,13 @@ const Nav = () => {
             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
               <li><Link to="/">Home</Link></li>
               <li><Link to="/alltoys">All Toys</Link></li>
-              <li><Link to='/mytoys'>My Toys</Link></li>
-              <li><Link to='/addtoys'>Add a Toys</Link></li>
+              {
+                user &&
+                <>
+                  <li><Link to='/mytoys'>My Toys</Link></li>
+                  <li><Link to='/addtoys'>Add a Toys</Link></li>
+                </>
+              }
               <li><Link to='/blogs'>Blogs</Link></li>
             </ul>
           </div>
@@ -31,15 +46,20 @@ const Nav = () => {
           <ul className="menu menu-horizontal px-1">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/alltoys">All Toys</Link></li>
-            <li><Link to='/mytoys'>My Toys</Link></li>
-            <li><Link to='/addtoys'>Add a Toys</Link></li>
+            {
+                user &&
+                <>
+                  <li><Link to='/mytoys'>My Toys</Link></li>
+                  <li><Link to='/addtoys'>Add a Toys</Link></li>
+                </>
+              }
             <li><Link to='/blogs'>Blogs</Link></li>
           </ul>
         </div>
         <div className="navbar-end">
           {
-            user ? <Link to='' className="btn md:w-50 m-2">LogOut</Link>
-            : <Link to='/login' className="btn md:w-50 m-2">Login</Link>
+            user ? <Link onClick={handelLogOut} className="btn md:w-50 m-2">LogOut</Link>
+              : <Link to='/login' className="btn md:w-50 m-2">Login</Link>
           }
           <img className="w-10" src={author} alt="" />
         </div>

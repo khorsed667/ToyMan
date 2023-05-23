@@ -18,7 +18,7 @@ import AddToy from './Components/AddToy/AddToy';
 import PrivateRoute from './Provider/PrivateRoute';
 import MyToys from './Components/MyToys/MyToys';
 import Blogs from './Components/Blogs/Blogs';
-import PersonToy from './Components/PersonToy/PersonToy';
+import SingleToyDetails from './Components/AllToys/SingleToyDetails';
 
 
 const router = createBrowserRouter([
@@ -32,17 +32,17 @@ const router = createBrowserRouter([
       },
       {
         path: 'sports-car-details/:id',
-        element: <SportDetails></SportDetails>,
+        element: <PrivateRoute><SportDetails></SportDetails></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/sport-car/${params.id}`)
       },
       {
         path: 'truck-details/:id',
-        element: <TruckDetails></TruckDetails>,
+        element: <PrivateRoute><TruckDetails></TruckDetails></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/trucks/${params.id}`)
       },
       {
         path: 'reg-car-details/:id',
-        element: <RegularDetails></RegularDetails>,
+        element: <PrivateRoute><RegularDetails></RegularDetails></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/regular-car/${params.id}`)
       },
       {
@@ -70,8 +70,9 @@ const router = createBrowserRouter([
         element: <Blogs></Blogs>
       },
       {
-        path:'persontoys',
-        element: <PrivateRoute><PersonToy></PersonToy></PrivateRoute>
+        path: '/cars/:id',
+        element: <PrivateRoute><SingleToyDetails></SingleToyDetails></PrivateRoute>,
+        loader : ({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
       }
     ]
   },

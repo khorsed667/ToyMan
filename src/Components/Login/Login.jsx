@@ -26,11 +26,11 @@ const Login = () => {
             })
             .catch(error => console.log(error))
 
-            singWithGoogle()
-            .then(result=> {
-                const user = result.user
-                console.log(user);
-            })
+        singWithGoogle()
+        .then(result=> {
+            const user = result.user
+            console.log(user);
+        })
     }
 
     return (

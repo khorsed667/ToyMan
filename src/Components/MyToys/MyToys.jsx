@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import ViewToys from "./ViewToys";
+import Swal from 'sweetalert2';
 
 
 const MyToys = () => {
@@ -31,7 +32,12 @@ const MyToys = () => {
             .then(data =>{
                 console.log(data);
                 if(data.deletedCount > 0){
-                    alert('Toy deleted Successfully');
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Toy deleted successfully',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                      })
                     const remaining = myToys.filter(tys => tys._id !== id)
                     setMyToys(remaining)
                 }

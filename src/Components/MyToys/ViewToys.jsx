@@ -22,7 +22,7 @@ const ViewToys = ({mt, handelDelete}) => {
                 </div>
             </td>
             <td>
-                <button className="btn bg-slate-100 btn-ghost btn-xs">Update</button>
+                <Link to={`/update-toy/${_id}`}><button className="btn bg-slate-100 btn-ghost btn-xs">Update</button></Link>
             </td>
             <td>
                 {category}

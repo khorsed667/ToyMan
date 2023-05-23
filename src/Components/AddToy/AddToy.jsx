@@ -28,7 +28,7 @@ const AddToy = () => {
             quantity,
         };
 
-        fetch('http://localhost:5000/postToys', {
+        fetch('https://toy-man-server-khorsed667.vercel.app/postToys', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'

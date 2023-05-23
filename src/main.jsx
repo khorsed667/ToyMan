@@ -35,17 +35,17 @@ const router = createBrowserRouter([
       {
         path: 'sports-car-details/:id',
         element: <PrivateRoute><SportDetails></SportDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/sport-car/${params.id}`)
+        loader: ({ params }) => fetch(`https://toy-man-server-khorsed667.vercel.app/sport-car/${params.id}`)
       },
       {
         path: 'truck-details/:id',
         element: <PrivateRoute><TruckDetails></TruckDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/trucks/${params.id}`)
+        loader: ({ params }) => fetch(`https://toy-man-server-khorsed667.vercel.app/trucks/${params.id}`)
       },
       {
         path: 'reg-car-details/:id',
         element: <PrivateRoute><RegularDetails></RegularDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/regular-car/${params.id}`)
+        loader: ({ params }) => fetch(`https://toy-man-server-khorsed667.vercel.app/regular-car/${params.id}`)
       },
       {
         path: 'login',
@@ -74,12 +74,12 @@ const router = createBrowserRouter([
       {
         path: '/cars/:id',
         element: <PrivateRoute><SingleToyDetails></SingleToyDetails></PrivateRoute>,
-        loader : ({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
+        loader : ({params}) => fetch(`https://toy-man-server-khorsed667.vercel.app/cars/${params.id}`)
       },
       {
         path: 'update-toy/:id',
         element:<UpdateToy></UpdateToy>,
-        loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
+        loader: ({params}) => fetch(`https://toy-man-server-khorsed667.vercel.app/cars/${params.id}`)
       },
       {
         path: '*',

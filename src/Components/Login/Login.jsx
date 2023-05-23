@@ -8,23 +8,29 @@ const Login = () => {
     // const [emailError, setEmailError] = useState('');
     // const [passwordError, setPasswordError] = useState('');
 
-    const {singIn} = useContext(AuthContext)
+    const { singIn, singWithGoogle } = useContext(AuthContext)
 
     const handelLogin = event => {
         event.preventDefault()
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        const loginInfo = {email, password}
+        const loginInfo = { email, password }
         console.log(loginInfo);
 
         singIn(email, password)
-        .then(result => {
-            const user = result.user
-            console.log(user);
-            form.reset();
-        })
-        .catch(error => console.log(error))
+            .then(result => {
+                const user = result.user
+                console.log(user);
+                form.reset();
+            })
+            .catch(error => console.log(error))
+
+            singWithGoogle()
+            .then(result=> {
+                const user = result.user
+                console.log(user);
+            })
     }
 
     return (
@@ -51,12 +57,17 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <button className="btn bg-orange-500">Login</button>
                         </div>
+                        <div className="form-control mt-6">
+                            <button className="btn bg-orange-500">SignUp with Google</button>
+                        </div>
                         <div>
                             <p>New to CarMan? Please <Link className='text-orange-500' to='/registration'>SignUp</Link></p>
                         </div>
                     </form>
+
                 </div>
             </div>
+
         </div>
     );
 };

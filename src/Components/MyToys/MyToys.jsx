@@ -13,18 +13,18 @@ const MyToys = () => {
 
     useEffect(()=>{
         console.log(user.email);
-        fetch(`http://localhost:5000/myToys/${user?.email}`)
+        fetch(`https://toy-man-server-khorsed667.vercel.app/myToys/${user?.email}`)
         .then(res => res.json())
         .then(data => {
             setMyToys(data)
         })
     },[user])
 
-    
+
     const handelDelete = id =>{
         const procceed = confirm('Are you to delete this toy?')
         if(procceed){
-            fetch(`http://localhost:5000/cars/${id}`,{
+            fetch(`https://toy-man-server-khorsed667.vercel.app/cars/${id}`,{
                 method: 'DELETE'
             })
             .then(res => res.json())

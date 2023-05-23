@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const SingleToys = ({ toy }) => {
 
-    const { picture, _id, name, price, rating, category, sellerEmail, } = toy
+    const { pictureUrl, _id, name, price, rating, category, sellerEmail, } = toy
 
     return (
         <tr>
@@ -11,7 +11,7 @@ const SingleToys = ({ toy }) => {
                 <div className="flex items-center space-x-3">
                     <div className="avatar">
                         <div className="mask mask-squircle w-12 h-12">
-                            <img src={picture} alt="Avatar Tailwind CSS Component" />
+                            <img src={pictureUrl} alt="Avatar Tailwind CSS Component" />
                         </div>
                     </div>
                     <div>

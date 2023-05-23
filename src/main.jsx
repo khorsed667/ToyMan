@@ -20,6 +20,7 @@ import MyToys from './Components/MyToys/MyToys';
 import Blogs from './Components/Blogs/Blogs';
 import SingleToyDetails from './Components/AllToys/SingleToyDetails';
 import UpdateToy from './Components/MyToys/UpdateToy';
+import Error from './Components/Error/Error';
 
 
 const router = createBrowserRouter([
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
         path: 'update-toy/:id',
         element:<UpdateToy></UpdateToy>,
         loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
+      },
+      {
+        path: '*',
+        element: <Error></Error>
       }
     ]
   },

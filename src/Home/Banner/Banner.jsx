@@ -2,7 +2,7 @@
 
 const Banner = () => {
 
-  const backgroundImageUrl = './../../../public/banner-img/banner.jpg'
+  const backgroundImageUrl = 'https://img.freepik.com/free-photo/closeup-shot-small-toy-car-wooden-train-track_181624-32510.jpg?w=996&t=st=1684863077~exp=1684863677~hmac=a4dc8b6e9a2b1699c190426a799974fe46f6f8429f4a85b18c1ebb20766691ea'
 
   return (
     <div>

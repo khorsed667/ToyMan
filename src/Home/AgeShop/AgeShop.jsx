@@ -7,7 +7,7 @@ const AgeShop = () => {
                 <p className='text-center text-2xl font-bold'>Shop By Age</p> <br />
                 <p className='text-center text-teal-600'>Our Collections</p>
             </div>
-            <div className="flex">
+            <div className="grid grid-cols-2 md:grid-cols-4">
                 <div className="m-5">
                     <img className="w-75" src="https://cdn.shopify.com/s/files/1/1152/4590/files/category_img1.png?v=1676031096" alt="" />
                     <p className='text-center font-bold'>For Baby</p>

@@ -32,10 +32,11 @@ const Tab = () => {
 
     return (
         <div className="container mx-auto p-4">
-            <p className="text-2xl text-center font-semibold mb-8">Whether your child is a fan of racing cars, off-road adventures, or classic vintage models, our diverse tab system allows you to easily navigate and find the perfect car toy to fuel their imagination.</p>
+            <p className="text-4xl text-center my-4 font-bold">Vibrant Categories</p>
+            <p className="text-2xl text-center font-medium mb-8">Whether your child is a fan of racing cars, off-road adventures, or classic vintage models, our diverse tab system allows you to easily navigate and find the perfect car toy to fuel their imagination.</p>
             <div className="mx-auto">
                 <div className="border-b border-gray-200">
-                    <ul className="flex">
+                    <ul className="flex w-full justify-center">
                         <li className="mr-1">
                             <button
                                 className={`${activeTab === 'featured-cars' ? 'bg-orange-500 hover:bg-orange-700 text-white' : 'bg-orange-300 hover:bg-orange-400 text-gray-800'
